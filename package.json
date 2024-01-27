@@ -14,6 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "copyfiles -u 1 src/contentScript.js public/background.js build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -34,5 +35,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
   }
 }
+
