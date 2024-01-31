@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component example</title>
+</head>
+<body>
+<!-- Button to call the function to activate the react-container -->
+<button onclick="renderExtensionBox()">Click me</button>
+<div id="react-container"></div>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+<script>
+    function ExtensionBox() {
+        return React.createElement(
+            'div',
+            {
+                className: 'extension-box',
+                style: {
+                    width: '500px',
+                    height: '300px',
+                    backgroundColor: 'grey',
+                    paddingRight: '20px',
+                    paddingLeft: '20px',
+                    boxSizing: 'border-box',
+                    fontFamily: 'Georgia, serif',
+                }
+            },
+            React.createElement(
+                'h2',
+                {
+                    style: {
+                        paddingTop: '20px',
+                        color: 'black',
+                        fontSize: '30px',
+                        textAlign: 'center',
+                        marginBottom: '10px',
+                    },
+                },
+                null,
+                'Aurora Borealis'
+            ),
+            React.createElement(
+                'div', // New div for the underline divider
+                {
+                    style: {
+                        position: 'relative',
+                        left: '12.5%',
+                        borderBottom: '2px solid black',
+                        marginBottom: '10px',
+                        width: '75%'
+
+                    },
+                }
+            ),
+            React.createElement(
+                'img',
+                {
+                    src: 'https://placehold.co/460x150', // Temporary image URL
+                    alt: 'Temporary Image',
+                    style: {
+                        maxWidth: '100%',
+                        height: 'auto',
+                        marginBottom: '10px',
+                    },
+                }
+            ),
+            React.createElement(
+                'button',
+                {
+                    style: {
+                        position: 'relative',
+                        left: '25%',
+                        width: '50%',
+                        height: '40px',
+                        backgroundColor: 'lightgrey',
+                        color: 'white',
+                        fontSize: '20px',
+                        fontWeight: 'bold',
+                        border: 'none',
+                        borderRadius: '5px',
+                        cursor: 'pointer',
+                    },
+                },
+                null,
+                'Go full screen'
+            )
+        );
+    }
+
+    function renderExtensionBox() {
+        ReactDOM.render(
+            React.createElement(ExtensionBox, null),
+            document.getElementById('react-container')
+        );
+    }
+</script>
+</body>
+</html>
