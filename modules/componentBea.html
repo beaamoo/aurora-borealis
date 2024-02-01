@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component example</title>
+</head>
+<body>
+<!-- Button to call the function to activate the react-container -->
+<button onclick="toggleAudioConnection()">Connect To Audio</button>
+<div id="react-container"></div>
+
+<style>
+    button {
+        background-color: #001f3f; /* Dark Navy */
+        color: #fff; /* White */
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Arial', sans-serif;
+        font-size: 12px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #003366; /* Slightly lighter shade of navy on hover */
+    }
+</style>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+<script>
+    let audioConnected = false;
+
+    function toggleAudioConnection() {
+        audioConnected = !audioConnected;
+        const button = document.querySelector('button');
+
+        if (audioConnected) {
+            button.textContent = 'Disconnect Audio';
+            // Implement the logic to connect to audio here
+            console.log('Connecting to audio...');
+        } else {
+            button.textContent = 'Connect Audio';
+            // Implement the logic to disconnect from audio here
+            console.log('Disconnecting from audio...');
+        }
+    }
+
+    function SyncToAudioButton() {
+        return null;
+    }
+
+    function App() {
+        return (
+            <div>
+                <SyncToAudioButton />
+            </div>
+        );
+    }
+
+    function renderReactApp() {
+        ReactDOM.render(
+            <App />,
+            document.getElementById('react-container')
+        );
+    }
+</script>
+</body>
+</html>

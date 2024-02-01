@@ -31,7 +31,7 @@ function App() {
                 <Visualizer active={isVisualizing} />
             </div>
             <button className="button" onClick={handleVisualizeClick}>
-                {isVisualizing ? 'Stop Visualizing' : 'Start Visualizing'}
+                {isVisualizing ? 'Disconnect from Audio' : 'Connect to Audio'}
             </button>
             <button className="fullscreen-toggle" onClick={handleFullScreenClick}>
                 {isFullScreen ? 'Exit Full Screen' : 'Full Screen'}
