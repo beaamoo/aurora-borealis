@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Aurora Borealis Visualizer",
-  "version": "1.0.0",
-  "description": "Visualize music with beautiful 3D aurora borealis inspired effects.",
-  "permissions": ["activeTab", "storage", "scripting"],
-  "host_permissions": [
-    "http://*/*",
-    "https://*/*"
-  ],
+  "name": "Aurora Borealis",
+  "version": "1.0",
+  "description": "A simple extension to connect to audio.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "action": {
     "default_popup": "index.html",
     "default_icon": {
@@ -16,24 +16,7 @@
       "128": "icons/icon128.png"
     }
   },
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
-  "background": {
-    "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["contentScript.js"]
-    }
-  ],
-  "web_accessible_resources": [
-    {
-      "resources": ["icons/icon16.png", "icons/icon48.png", "icons/icon128.png"],
-      "matches": ["<all_urls>"]
-    }
+  "permissions": [
+    "activeTab"
   ]
 }

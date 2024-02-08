@@ -37,7 +37,18 @@
     ]
   },
   "devDependencies": {
-    "copyfiles": "^2.4.1"
-  }
+    "@babel/core": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "babel-loader": "^9.1.3",
+    "copyfiles": "^2.4.1",
+    "css-loader": "^6.10.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "description": "## Description The Aurora Borealis Visualizer is a browser extension that offers a unique audio-visual experience. It captures audio playing in your browser and transforms it into a mesmerizing display of 3D aurora borealis-inspired visualizations, synced in real-time with the music.",
+  "main": "webpack.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
-

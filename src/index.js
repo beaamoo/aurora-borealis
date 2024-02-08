@@ -1,6 +1,11 @@
-import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import './styles/index.css';
+import ConnectButton from './components/ConnectButton';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <React.StrictMode>
+        <ConnectButton />
+    </React.StrictMode>,
+    document.getElementById('root')
+);

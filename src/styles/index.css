@@ -1,0 +1,29 @@
+/* General body styling for the popup */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Styling for the "Connect to Audio" button */
+.connect-button {
+    background-color: #008CBA; /* Blue button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.connect-button:hover {
+    background-color: #005f73; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly increase button size on hover */
+}
+
+.connect-button:active {
+    transform: scale(0.95); /* Slightly decrease button size when clicked */
+}
