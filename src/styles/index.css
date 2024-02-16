@@ -1,29 +1,46 @@
 /* General body styling for the popup */
-body {
+body, html, #root {
+    min-height: 200px;
+    min-width: 200px;
+    height: 100%;
     margin: 0;
-    padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000; /* Assuming a dark theme for an audio visualizer */
+    color: #fff;
 }
 
 /* Styling for the "Connect to Audio" button */
 .connect-button {
-    background-color: #008CBA; /* Blue button */
+    background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 12px; /* Adjusted padding for a more balanced look */
     border: none;
-    border-radius: 5px;
+    border-radius: 4px; /* Slightly rounded corners for a modern look */
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
+    font-size: 10px; /* Smaller font size for minimalism */
+    font-weight: bold; /* Adds a bit of emphasis */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth, optional */
+    min-width: 100px; /* Ensures the button is wide enough to keep text on one line */
+    white-space: nowrap; /* Keeps the text from wrapping to a new line */
+    text-align: center; /* Ensures text is centered within the button */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Smooth transition for the opacity change */
+    visibility: hidden;
+    display: flex;
 }
 
 .connect-button:hover {
-    background-color: #005f73; /* Darker blue on hover */
-    transform: scale(1.05); /* Slightly increase button size on hover */
+    background-color: #0056b3; /* A darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* Enhanced shadow on hover for depth */
 }
 
 .connect-button:active {
-    transform: scale(0.95); /* Slightly decrease button size when clicked */
+    background-color: #004085; /* Even darker on click */
+    transform: translateY(1px); /* Subtle press down effect */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Less shadow on press */
 }

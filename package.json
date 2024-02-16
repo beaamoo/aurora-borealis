@@ -6,9 +6,11 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "meyda": "^5.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "three": "^0.161.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -20,8 +22,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -46,7 +47,7 @@
     "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4"
   },
-  "description": "## Description The Aurora Borealis Visualizer is a browser extension that offers a unique audio-visual experience. It captures audio playing in your browser and transforms it into a mesmerizing display of 3D aurora borealis-inspired visualizations, synced in real-time with the music.",
+  "description": "The Aurora Borealis Visualizer is a browser extension captures audio playing in your browser and transforms it into a mesmerizing display of 3D aurora borealis-inspired visualizations, synced in real-time with the music.",
   "main": "webpack.config.js",
   "keywords": [],
   "author": "",
